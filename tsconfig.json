@@ -3,11 +3,17 @@
     "outDir": "./dist/",
     "noImplicitAny": true,
     "module": "es6",
+    // В какую спецификацию компилируемЖ для поддержки большинства браузеров
     "target": "es5",
     "jsx": "react",
+    // Компилятор будет обрабатывать на только TS файлы, но и js файлы
     "allowJs": true,
     "moduleResolution": "node",
+    // Для абволютного ипморта
+    "baseUrl": ".",
+    // Позволяет использовать дефолтный импорт
     "allowSyntheticDefaultImports": true,
+    // Позволяет работать с пакетами которые используют common.js
     "esModuleInterop": true
   },
   "ts-node": {
