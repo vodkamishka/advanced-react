@@ -4,7 +4,6 @@ import {buildPlugins} from "./buildPlugins";
 import {buildLoaders} from "./buildLoaders";
 import {buildResolvers} from "./buildResolvers";
 import {buildDevServer} from "./buildDevServer";
-import { Configuration as DevServerConfiguration } from 'webpack-dev-server'
 
 export function buildWebpackConfig(options: BuildOptions): webpack.Configuration {
 
