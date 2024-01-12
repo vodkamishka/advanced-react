@@ -4,6 +4,7 @@ import {Route, Routes, Link} from 'react-router-dom';
 import {MainPageAsync} from "./pages/MainPage/MainPage.async";
 import {AboutPageAsync} from "./pages/AboutPage/AboutPage.async";
 import {Theme, ThemeContext} from "./theme/ThemeContext";
+import {classNames} from "./helpers/classNames/classNames";
 
 function App() {
     const {theme, setTheme} = useContext(ThemeContext);
@@ -15,7 +16,7 @@ function App() {
 
 
     return (
-        <div className={`app ${theme}`}>
+        <div className={classNames('app', {}, ['theme'])}>
             <button onClick={toggleTheme}>Toggle</button>
             <Link to={"/"}>Mane page</Link>
             <Link to={"about"}>About page</Link>
