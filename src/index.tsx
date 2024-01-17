@@ -3,6 +3,7 @@ import {BrowserRouter} from "react-router-dom";
 import {ThemeProvider} from "app/providers/ThemeProvider";
 import { createRoot } from 'react-dom/client';
 
+import 'shared/config/i18n/i18n';
 
 const domNode = document.getElementById('root');
 

@@ -4,7 +4,7 @@ import {AppRouter} from "app/providers/router";
 import {Navbar} from "widgets/Navbar";
 import {useTheme} from "app/providers/ThemeProvider";
 import {Sidebar} from "widgets/Sidebar";
-
+import {Suspense} from 'react';
 
 function App() {
 
@@ -12,12 +12,13 @@ function App() {
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Navbar />
-            <div className="content-page">
-                <Sidebar />
-                <AppRouter />
-            </div>
-
+            <Suspense fallback="">
+                <Navbar />
+                <div className="content-page">
+                    <Sidebar />
+                    <AppRouter />
+                </div>
+            </Suspense>
         </div>
     );
 }
