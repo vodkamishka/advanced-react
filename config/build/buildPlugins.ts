@@ -16,6 +16,8 @@ export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPlugi
         // Плагин для передачи глобальных переменных во все приложение;
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
-        })
+        }),
+        // Hot Module Replacement
+        new webpack.HotModuleReplacementPlugin()
     ]
 }
