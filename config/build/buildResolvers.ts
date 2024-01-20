@@ -1,9 +1,9 @@
-import {ResolveOptions} from "webpack";
-import {BuildOptions} from "./types/config";
+import { type ResolveOptions } from 'webpack';
+import { type BuildOptions } from './types/config';
 
-export function buildResolvers(options: BuildOptions): ResolveOptions {
+export function buildResolvers (options: BuildOptions): ResolveOptions {
     return {
-        extensions: [ '.tsx', '.ts', '.js'],
+        extensions: ['.tsx', '.ts', '.js'],
         // Предпочитетльны абсолютные пути
         preferAbsolute: true,
         // Настройка позволяет использовать абсолютный импорт к папке src и node_modules
@@ -11,5 +11,5 @@ export function buildResolvers(options: BuildOptions): ResolveOptions {
         // Для каждого модуля главный файл index
         mainFiles: ['index'],
         alias: {}
-    }
+    };
 }
