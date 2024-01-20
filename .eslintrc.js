@@ -5,7 +5,7 @@ module.exports = {
     },
     "extends": [
         "standard-with-typescript",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
     ],
     "overrides": [
         {
@@ -25,7 +25,8 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "i18next"
     ],
     "settings": {
         "react": {
@@ -42,5 +43,6 @@ module.exports = {
         "semi": ["error", "always"],
         "@typescript-eslint/semi": "off",
         '@typescript-eslint/naming-convention': "off",
+        'i18next/no-literal-string': ['error', {markupOnly: true}]
     },
 }
