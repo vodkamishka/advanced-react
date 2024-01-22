@@ -41,8 +41,8 @@ module.exports = {
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/prefer-nullish-coalescing": "off",
         "semi": ["error", "always"],
-        "@typescript-eslint/semi": "off",
+        "@typescript-eslint/semi": "error",
         '@typescript-eslint/naming-convention': "off",
-        'i18next/no-literal-string': ['error', {markupOnly: true}]
+        'i18next/no-literal-string': ['error', {markupOnly: true}],
     },
 }
