@@ -19,7 +19,6 @@
     "allowSyntheticDefaultImports": true,
     // Позволяет работать с пакетами которые используют common.js
     "esModuleInterop": true,
-
   },
   "ts-node": {
     "compilerOptions": {
