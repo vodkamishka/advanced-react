@@ -1,9 +1,5 @@
-/**
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
-
 import type { Config } from 'jest';
+import path from "path";
 
 const config: Config = {
     // All imported modules in your tests should be mocked automatically
@@ -53,7 +49,25 @@ const config: Config = {
     ],
 
     // Indicates which provider should be used to instrument code for coverage
-    coverageProvider: 'babel'
+    coverageProvider: 'babel',
+
+    // In jest.config.js add (if you haven't already) - for library jest-dom for testing dom of react components
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+
+    // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
+    transformIgnorePatterns: [
+        '\\\\node_modules\\\\'
+    ],
+
+    modulePaths: [
+        '<rootDir>',
+        '<rootDir>/src'
+    ],
+
+    moduleNameMapper: {
+        '(scss)$': 'identity-obj-proxy',
+        '(svg)$': path.resolve(__dirname, 'jestEmptyComponent.tsx')
+    }
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
@@ -112,9 +126,6 @@ const config: Config = {
 
     // An enum that specifies notification mode. Requires { notify: true }
     // notifyMode: "failure-change",
-
-    // A preset that is used as a base for Jest's configuration
-    // preset: undefined,
 
     // Run tests from one or more projects
     // projects: undefined,
@@ -176,12 +187,6 @@ const config: Config = {
 
     // A map from regular expressions to paths to transformers
     // transform: undefined,
-
-    // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-    // transformIgnorePatterns: [
-    //   "\\\\node_modules\\\\",
-    //   "\\.pnp\\.[^\\\\]+$"
-    // ],
 
     // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
     // unmockedModulePathPatterns: undefined,

@@ -10,23 +10,20 @@ module.exports = {
     "overrides": [
         {
             "env": {
-                "node": true
+                "node": true,
             },
             "files": [
                 ".eslintrc.{js,cjs}"
             ],
             "parserOptions": {
-                "sourceType": "script"
-            }
+                "ecmaVersion": "latest",
+                "sourceType": "module",
+            },
         }
     ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
     "plugins": [
         "react",
-        "i18next"
+        "i18next",
     ],
     "settings": {
         "react": {
@@ -41,7 +38,7 @@ module.exports = {
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/prefer-nullish-coalescing": "off",
         "semi": ["error", "always"],
-        "@typescript-eslint/semi": "error",
+        "@typescript-eslint/semi": "off",
         '@typescript-eslint/naming-convention': "off",
         'i18next/no-literal-string': ['error', {markupOnly: true}],
     },
