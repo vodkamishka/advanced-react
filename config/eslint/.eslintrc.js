@@ -6,6 +6,7 @@ module.exports = {
     "extends": [
         "standard-with-typescript",
         "plugin:react/recommended",
+        "plugin:storybook/recommended"
     ],
     "overrides": [
         {
@@ -39,7 +40,7 @@ module.exports = {
         "@typescript-eslint/prefer-nullish-coalescing": "off",
         "semi": ["error", "always"],
         "@typescript-eslint/semi": "off",
-        '@typescript-eslint/naming-convention': "off",
+        '@typescript-eslint/naming-convention': "error",
         'i18next/no-literal-string': ['error', {markupOnly: true}],
     },
 }
