@@ -1,4 +1,4 @@
-import LightIcon from 'theme-light.svg';
+import LightIcon from './theme-light.svg';
 import DarkIcon from './theme-dark.svg';
 
 export {
