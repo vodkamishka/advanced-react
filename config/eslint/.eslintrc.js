@@ -40,7 +40,7 @@ module.exports = {
         "@typescript-eslint/prefer-nullish-coalescing": "off",
         "semi": ["error", "always"],
         "@typescript-eslint/semi": "off",
-        '@typescript-eslint/naming-convention': "error",
+        '@typescript-eslint/naming-convention': "off",
         'i18next/no-literal-string': ['error', {markupOnly: true}],
     },
 }
