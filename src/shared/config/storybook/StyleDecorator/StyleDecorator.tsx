@@ -2,7 +2,7 @@ import '../../../../app/styles/index.scss';
 import type { Decorator } from '@storybook/react';
 
 export const StyleDecorator: Decorator = (Story) => (
-    <div>
+    <div className={'yml'}>
         <Story/>
     </div>
 );
