@@ -43,4 +43,7 @@ module.exports = {
         '@typescript-eslint/naming-convention': "off",
         'i18next/no-literal-string': ['error', {markupOnly: true}],
     },
+    "eslintIgnore": [
+        "webpack.config.ts"
+    ]
 }
