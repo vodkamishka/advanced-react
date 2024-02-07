@@ -19,21 +19,20 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPl
             __IS_DEV__: JSON.stringify(isDev)
         }),
 
-
         // Visualize size of webpack output files with an interactive zoomable treemap
         new BundleAnalyzerPlugin({
             openAnalyzer: false
         })
-    ]
+    ];
 
     if (isDev) {
         // Hot Module Replacement
         plugins.push(new webpack.HotModuleReplacementPlugin());
 
         // Visualize size of webpack output files with an interactive zoomable treemap
-        new BundleAnalyzerPlugin({
+        plugins.push(new BundleAnalyzerPlugin({
             openAnalyzer: false
-        })
+        }));
     }
 
     return plugins;
