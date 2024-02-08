@@ -4,7 +4,7 @@ import { type Configuration as DevServerConfiguration } from 'webpack-dev-server
 import { buildPlugins } from './buildPlugins';
 import { buildLoaders } from './buildLoaders';
 import { buildResolvers } from './buildResolvers';
-import buildDevServer from './buildDevServer';
+// import { buildDevServer } from './buildDevServer';
 
 interface Configuration extends WebpackConfiguration {
     devServer?: DevServerConfiguration
@@ -26,7 +26,7 @@ export function buildWebpackConfig (options: BuildOptions): Configuration {
             rules: buildLoaders(options)
         },
         resolve: buildResolvers(options),
-        devtool: isDev ? 'inline-source-map' : undefined,
-        devServer: isDev ? buildDevServer(options) : undefined
+        devtool: isDev ? 'inline-source-map' : undefined
+        // devServer: isDev ? buildDevServer(options) : undefined
     };
 }
