@@ -30,9 +30,9 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPl
         plugins.push(new webpack.HotModuleReplacementPlugin());
 
         // Visualize size of webpack output files with an interactive zoomable treemap
-        plugins.push(new BundleAnalyzerPlugin({
-            openAnalyzer: false
-        }));
+        // plugins.push(new BundleAnalyzerPlugin({
+        //     openAnalyzer: false
+        // }));
     }
 
     return plugins;

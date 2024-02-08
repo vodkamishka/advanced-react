@@ -14,3 +14,5 @@ declare module '*.svg' {
 }
 
 declare const __IS_DEV__: boolean;
+
+declare module '*.ts'
