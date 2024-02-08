@@ -17,11 +17,6 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPl
         // Плагин для передачи глобальных переменных во все приложение;
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev)
-        }),
-
-        // Visualize size of webpack output files with an interactive zoomable treemap
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false
         })
     ];
 
@@ -30,9 +25,9 @@ export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPl
         plugins.push(new webpack.HotModuleReplacementPlugin());
 
         // Visualize size of webpack output files with an interactive zoomable treemap
-        // plugins.push(new BundleAnalyzerPlugin({
-        //     openAnalyzer: false
-        // }));
+        plugins.push(new BundleAnalyzerPlugin({
+            openAnalyzer: false
+        }));
     }
 
     return plugins;
