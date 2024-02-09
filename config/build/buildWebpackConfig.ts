@@ -4,7 +4,9 @@ import { type Configuration as DevServerConfiguration } from 'webpack-dev-server
 import { buildPlugins } from './buildPlugins';
 import { buildLoaders } from './buildLoaders';
 import { buildResolvers } from './buildResolvers';
-import { buildDevServer } from './buildDevServer';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import { buildDevServer } from './buildDevServer.ts';
 
 interface Configuration extends WebpackConfiguration {
     devServer?: DevServerConfiguration
