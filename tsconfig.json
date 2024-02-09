@@ -28,5 +28,6 @@
   "include": [
     "./config/jest/setupTests.ts", // Подключаем библиотеку jest-dom
     "./src",
-  ]
+  ],
+  "types": ["node"]
 }
