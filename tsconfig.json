@@ -15,6 +15,7 @@
     "paths": {
       "*": ["./src/*"]
     },
+    "skipLibCheck": true,
     // Позволяет использовать дефолтный импорт
     "allowSyntheticDefaultImports": true,
     // Позволяет работать с пакетами которые используют common.js
