@@ -1,6 +1,8 @@
 import type webpack from 'webpack';
 import { type BuildOptions } from './types/config';
-import buildCssLoader from './loaders/buildCssLoader';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import { buildCssLoader } from './loaders/buildCssLoader.ts';
 
 export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     const svgLoader = {
