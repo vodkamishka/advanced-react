@@ -23,12 +23,10 @@
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS",
-      "skipLibCheck": true
     }
   },
   "include": [
     "./config/jest/setupTests.ts", // Подключаем библиотеку jest-dom
     "./src",
-    "**/*.ts"
   ]
 }
