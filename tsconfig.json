@@ -28,7 +28,6 @@
   "include": [
     "./config/jest/setupTests.ts", // Подключаем библиотеку jest-dom
     "./src",
-    "./config/build/buildLoaders.ts",
-    "./config/build/buildWebpackConfig.ts"
+    "**/*.ts"
   ]
 }
