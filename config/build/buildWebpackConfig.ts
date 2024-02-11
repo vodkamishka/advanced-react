@@ -1,10 +1,10 @@
 import { type BuildOptions } from './types/config';
 import { type Configuration as WebpackConfiguration } from 'webpack';
 import { type Configuration as DevServerConfiguration } from 'webpack-dev-server';
-import { buildDevServer, buildLoaders, buildPlugins, buildResolvers } from "./index";
-
-
-
+import {buildPlugins} from "./buildPlugins";
+import {buildLoaders} from "./buildLoaders";
+import {buildResolvers} from "./buildResolvers";
+import {buildDevServer} from "./buildDevServer";
 interface Configuration extends WebpackConfiguration {
     devServer?: DevServerConfiguration
 }
