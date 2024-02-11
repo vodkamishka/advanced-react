@@ -4,7 +4,7 @@ import { type Configuration as DevServerConfiguration } from 'webpack-dev-server
 import {buildPlugins} from "./buildPlugins";
 import {buildLoaders} from "./buildLoaders";
 import {buildResolvers} from "./buildResolvers";
-import {buildDevServer} from "./buildDevServer";
+import {buildDevServer} from "config/buildDevServer";
 interface Configuration extends WebpackConfiguration {
     devServer?: DevServerConfiguration
 }
