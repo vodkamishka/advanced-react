@@ -22,7 +22,8 @@
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "CommonJS",
+      "skipLibCheck": true
     }
   },
   "include": [
