@@ -14,7 +14,6 @@
     // Настройка для абсолютного импорта
     "paths": {
       "*": ["./src/*"],
-      "config/*": ["./config/build/*"]
     },
     // Позволяет использовать дефолтный импорт
     "allowSyntheticDefaultImports": true,
