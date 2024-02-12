@@ -1,7 +1,7 @@
 import type webpack from 'webpack';
 import { type BuildOptions } from './types/config';
-//import { buildCssLoader } from './loaders/buildCssLoader';
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+// import { buildCssLoader } from './loaders/buildCssLoader';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     const svgLoader = {
