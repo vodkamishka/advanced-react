@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonTheme } from './Button';
 import { Theme } from 'app/providers/ThemeProvider';
 import '../../../app/styles/index.scss';
 
@@ -20,7 +20,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Clear: Story = {
     args: {
-        theme: ThemeButton.CLEAR,
+        theme: ButtonTheme.CLEAR,
         children: 'Clear'
     }
 };
@@ -33,7 +33,7 @@ export const Primary: Story = {
 
 export const Outline: Story = {
     args: {
-        theme: ThemeButton.OUTLINE,
+        theme: ButtonTheme.OUTLINE,
         children: 'Outline'
     }
 };
