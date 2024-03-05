@@ -6,7 +6,7 @@ import { buildLoaders } from './buildLoaders';
 import { buildResolvers } from './buildResolvers';
 // import { buildDevServer } from './buildDevServer';
 interface Configuration extends WebpackConfiguration {
-    devServer?: DevServerConfiguration
+    devServer?: DevServerConfiguration;
 }
 
 export function buildWebpackConfig (options: BuildOptions): Configuration {
