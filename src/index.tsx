@@ -6,6 +6,8 @@ import { createRoot } from 'react-dom/client';
 import 'shared/config/i18n/i18n';
 import { ErrorBoundary } from 'app/providers/ErrorBoundry';
 
+import 'app/styles/index.scss';
+
 const domNode = document.getElementById('root');
 
 const root = createRoot(domNode);

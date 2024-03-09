@@ -25,6 +25,7 @@ module.exports = {
     "plugins": [
         "react",
         "i18next",
+        "react-hooks",
     ],
     "settings": {
         "react": {
@@ -50,6 +51,8 @@ module.exports = {
             "singleline": {
                 "delimiter": "semi",
                 "requireLast": false
-            }}]
+            }}],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error"
     },
 }
