@@ -1,6 +1,7 @@
 import type { Preview } from '@storybook/react';
 import '../../src/app/styles/index.scss';
 import { StyleDecorator } from 'shared/config/storybook/StyleDecorator/StyleDecorator';
+import { type StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 
 const preview: Preview = {
     parameters: {
@@ -13,7 +14,12 @@ const preview: Preview = {
         }
     },
     decorators: [
-        StyleDecorator
+        (Story) => (
+            <StoreProvider>
+                {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
+                <Story />
+            </StoreProvider>
+        )
     ]
 };
 

@@ -14,6 +14,10 @@ export default ({ config }: { config: webpack.Configuration }) => {
 
     const isDev = true;
 
+    config.resolve.alias = {
+        '@/entities': path.resolve(__dirname, '../../src/app/entities/Counter')
+    };
+
     config.resolve.modules.push(paths.src);
     config.resolve.extensions.push('.ts', '.tsx');
 

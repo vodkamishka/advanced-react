@@ -7,5 +7,9 @@
   "Обновить страницу": "Refresh the page",
   "Короткий язык": "En",
   "Главная страница": "Main page",
-  "Страница о нас": "About page"
+  "Страница о нас": "About page",
+  "Форма авторизации": "Authorization form",
+  "Вы ввели неверный логин или пароль": "You entered an incorrect username or password",
+  "Войти": "Login",
+  "Выйти": "Logout"
 }

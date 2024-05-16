@@ -1,3 +1,7 @@
+import {
+    getUserAuthDataValue
+} from 'entities/User/model/selectors/getUserAuthDataValue/getUserAuthDataValue';
+
 export {
     userReducer,
     userActions
