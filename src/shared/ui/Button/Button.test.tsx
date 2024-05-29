@@ -10,7 +10,7 @@ describe('Button', () => {
 
     test('Test dark theme', () => {
         render(<Button theme={Theme.DARK}>TEST</Button>);
-        expect(screen.getByText('TEST')).toHaveClass('app_dark_theme');
+        expect(screen.getByText('TEST')).toHaveClass('Button app_dark_theme size_m');
         screen.debug();
     });
 });
