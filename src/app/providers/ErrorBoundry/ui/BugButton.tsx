@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { t } from 'i18next';
 
 interface BugButtonProps {
-    className?: string
+    className?: string;
 }
 
 export const BugButton = ({ className }: BugButtonProps) => {
