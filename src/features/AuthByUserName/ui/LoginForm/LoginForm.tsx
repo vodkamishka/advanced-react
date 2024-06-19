@@ -6,13 +6,13 @@ import { Input } from 'shared/ui/Input/Input';
 import { useDispatch, useSelector, useStore } from 'react-redux';
 import { memo, useCallback, useEffect } from 'react';
 import { loginActions, loginReducer } from '../../model/slice/LoginSlice';
-import { loginByUserName } from '../../model/serivces/loginByUserName/loginByUserName';
+import { loginByUserName } from '../../model/services/loginByUserName/loginByUserName';
 import { TextTheme, Text } from 'shared/ui/Text/Text';
-import {getLoginUserName} from "../../model/selectors/getLoginUserName/getLoginUserName";
-import {getLoginPassword} from "../../model/selectors/getLoginPassword/getLoginPassword";
-import {getLoginIsLoading} from "../../model/selectors/getLoginLoading/getLogingIsLoading";
-import {getLoginError} from "../../model/selectors/getLoginError/getLoginError";
-import {DynamicModuleLoader, ReducersList} from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
+import { getLoginUserName } from '../../model/selectors/getLoginUserName/getLoginUserName';
+import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
+import { getLoginIsLoading } from '../../model/selectors/getLoginLoading/getLoginIsLoading';
+import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
+import { DynamicModuleLoader, type ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 export interface LoginFormProps {
     className?: string;
@@ -20,7 +20,7 @@ export interface LoginFormProps {
 
 const initialReducers: ReducersList = {
     loginForm: loginReducer
-}
+};
 
 const LoginForm = memo(({ className }: LoginFormProps) => {
     const { t } = useTranslation();
