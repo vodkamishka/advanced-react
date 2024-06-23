@@ -41,6 +41,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "first": "Tymur",
+    "lastname": "Ulba",
+    "age": 22,
+    "currency": "USDT",
+    "country": "Russia",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "https://i.pinimg.com/564x/56/68/e6/5668e6e1f06c500e586564e37f7ab58d.jpg"
   }
 }

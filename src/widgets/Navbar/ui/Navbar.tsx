@@ -1,18 +1,18 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Navbar.module.scss';
-import React, { useCallback, useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 import { LoginModal } from 'features/AuthByUserName';
-import {useDispatch, useSelector} from "react-redux";
-import {getUserAuthDataValue} from "entities/User/model/selectors/getUserAuthDataValue/getUserAuthDataValue";
-import {userActions} from "entities/User";
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserAuthDataValue } from 'entities/User/model/selectors/getUserAuthDataValue/getUserAuthDataValue';
+import { userActions } from 'entities/User';
 
 interface NavbarProps {
     className?: string;
 }
 
-const Navbar = ({ className }: NavbarProps) => {
+const Navbar = memo(({ className }: NavbarProps) => {
     const { t } = useTranslation();
     const [isAuthModal, setIsAuthModal] = useState(false);
 
@@ -29,7 +29,7 @@ const Navbar = ({ className }: NavbarProps) => {
 
     const onLogout = useCallback(() => {
         dispatch(userActions.logout());
-    }, []);
+    }, [dispatch]);
 
     if (authData) {
         return (
@@ -42,7 +42,7 @@ const Navbar = ({ className }: NavbarProps) => {
                     {t('Выйти')}
                 </Button>
             </div>
-        )
+        );
     }
 
     return (
@@ -60,6 +60,6 @@ const Navbar = ({ className }: NavbarProps) => {
             />}
         </div>
     );
-};
+});
 
 export default Navbar;
